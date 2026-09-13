@@ -1,0 +1,719 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    font-family: Georgia, serif;
+
+    color: #7a3154;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd6e7,
+            #ffb6d5,
+            #ffe4ef
+        );
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.page {
+    display: none;
+
+    min-height: 100vh;
+
+    padding: 25px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.page.active {
+    display: flex;
+}
+
+
+.card {
+    width: 100%;
+    max-width: 650px;
+
+    padding: 40px 25px;
+
+    text-align: center;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255, 245, 249, 0.95);
+
+    box-shadow:
+        0 20px 60px
+        rgba(150, 60, 100, 0.25);
+}
+
+
+.flower {
+    font-size: 70px;
+}
+
+.small-title {
+    margin-top: 15px;
+
+    font-size: 14px;
+
+    letter-spacing: 4px;
+
+    color: #d94f8c;
+}
+
+h1 {
+    margin: 20px 0;
+
+    font-size:
+        clamp(
+            42px,
+            9vw,
+            80px
+        );
+
+    line-height: 1;
+
+    color: #8f315c;
+}
+
+h2 {
+    margin-bottom: 20px;
+
+    font-size: 32px;
+
+    color: #8f315c;
+}
+
+p {
+    width: 100%;
+
+    max-width: 580px;
+
+    margin: 18px auto;
+
+    line-height: 1.8;
+
+    text-align: center;
+
+    white-space: normal;
+
+    font-size: 17px;
+
+    word-wrap: break-word;
+
+    color: #71344f;
+}
+
+.pink {
+    color: #e05291;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button,
+.qr-button {
+    margin-top: 20px;
+
+    padding: 15px 32px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f783b5,
+            #e95796
+        );
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    display: inline-block;
+
+    box-shadow:
+        0 8px 20px
+        rgba(220, 70, 130, 0.25);
+
+    transition: 0.2s;
+}
+
+button:hover,
+.qr-button:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #ff70aa,
+            #df4388
+        );
+
+    transform:
+        translateY(-2px);
+}
+
+button:active,
+.qr-button:active {
+    transform:
+        scale(0.95);
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+input {
+    width: 80%;
+
+    max-width: 320px;
+
+    padding: 15px;
+
+    border:
+        2px solid #f5a8c8;
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    font-size: 16px;
+
+    outline: none;
+
+    background: #fff7fb;
+
+    color: #7a3154;
+}
+
+input:focus {
+    border-color: #e95796;
+
+    box-shadow:
+        0 0 10px
+        rgba(233, 87, 150, 0.25);
+}
+
+
+/* =========================
+   KADO
+========================= */
+
+.gift-box {
+    display: inline-block;
+}
+
+.gift {
+    font-size: 110px;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.gift:hover {
+    transform:
+        scale(1.1)
+        rotate(-4deg);
+}
+
+.gift:active {
+    transform:
+        scale(0.85);
+}
+
+
+/* =========================
+   PETASAN
+========================= */
+
+.fireworks {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    pointer-events: none;
+
+    overflow: hidden;
+}
+
+.firework {
+    position: absolute;
+
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    animation:
+        ledakan 1.5s
+        ease-out
+        forwards;
+}
+
+@keyframes ledakan {
+
+    0% {
+        transform:
+            translate(0,0)
+            scale(1);
+
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translate(
+                calc(var(--x) * 1px),
+                calc(var(--y) * 1px)
+            )
+            scale(0.2);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   KUE
+========================= */
+
+.cake-area {
+    display: none;
+
+    margin-top: 25px;
+
+    animation:
+        munculKue
+        1s
+        ease
+        forwards;
+}
+
+.cake-area.show {
+    display: block;
+}
+
+@keyframes munculKue {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(50px)
+            scale(0.6);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+.cake {
+    position: relative;
+
+    width: 220px;
+    height: 150px;
+
+    margin:
+        55px auto 20px;
+}
+
+.cake-bottom {
+    position: absolute;
+
+    bottom: 0;
+    left: 10px;
+
+    width: 200px;
+    height: 75px;
+
+    border-radius:
+        12px
+        12px
+        20px
+        20px;
+
+    background:
+        linear-gradient(
+            #ff9acb,
+            #f45c9f
+        );
+
+    box-shadow:
+        0 10px 20px
+        rgba(0,0,0,0.2);
+}
+
+.cake-top {
+    position: absolute;
+
+    left: 5px;
+    bottom: 65px;
+
+    width: 210px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            #ffd1e5,
+            #ff8fbe
+        );
+}
+
+.cream {
+    position: absolute;
+
+    left: 20px;
+    bottom: 55px;
+
+    width: 180px;
+    height: 25px;
+
+    border-radius: 50%;
+
+    background: #fff1f7;
+
+    z-index: 2;
+}
+
+
+/* =========================
+   LILIN
+========================= */
+
+.candles {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: 95px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 22px;
+
+    z-index: 10;
+}
+
+.candle {
+    position: relative;
+
+    width: 16px;
+    height: 50px;
+
+    border-radius: 5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff70b0,
+            #ffffff,
+            #ff70b0
+        );
+
+    cursor: pointer;
+
+    transition:
+        opacity 0.3s,
+        transform 0.3s;
+}
+
+.candle:hover {
+    transform:
+        translateY(-5px);
+}
+
+.flame {
+    position: absolute;
+
+    width: 20px;
+    height: 28px;
+
+    left: -2px;
+    top: -28px;
+
+    border-radius:
+        50% 50% 50% 50% /
+        60% 60% 40% 40%;
+
+    background:
+        radial-gradient(
+            circle at 50% 70%,
+            #ffffff 8%,
+            #ffe14a 30%,
+            #ff7838 60%,
+            transparent 72%
+        );
+
+    animation:
+        api 0.6s
+        infinite
+        alternate;
+
+    cursor: pointer;
+
+    filter:
+        drop-shadow(
+            0 0 8px
+            rgba(255,180,50,0.8)
+        );
+}
+
+@keyframes api {
+
+    from {
+        transform:
+            scale(0.9)
+            rotate(-4deg);
+    }
+
+    to {
+        transform:
+            scale(1.1)
+            rotate(4deg);
+    }
+}
+
+.candle.off {
+    opacity: 0.55;
+}
+
+.candle.off .flame {
+    display: none;
+}
+
+.smoke {
+    position: absolute;
+
+    top: -40px;
+    left: -3px;
+
+    font-size: 22px;
+
+    animation:
+        asap 1.5s
+        ease-out
+        forwards;
+}
+
+@keyframes asap {
+
+    from {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+    to {
+        opacity: 0;
+
+        transform:
+            translateY(-45px)
+            scale(1.5);
+    }
+}
+
+
+/* =========================
+   INSTRUKSI
+========================= */
+
+#instruksiLilin {
+    display: none;
+
+    margin-top: 20px;
+
+    color: #d94f8c;
+
+    font-size: 17px;
+
+    animation:
+        berkedip
+        1s
+        infinite
+        alternate;
+}
+
+@keyframes berkedip {
+
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#tombolLanjutKue {
+    display: none;
+}
+
+
+/* =========================
+   FOTO
+========================= */
+
+.photo {
+    width: 100%;
+
+    height: 350px;
+
+    margin: 25px 0;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    align-items: stretch;
+
+    justify-content: center;
+
+    background: #ffd6e7;
+
+    overflow: hidden;
+}
+
+.photo img {
+    width: 33.333%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =========================
+   HATI
+========================= */
+
+.heart {
+    position: fixed;
+
+    bottom: -30px;
+
+    animation:
+        naik 5s
+        linear
+        forwards;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+@keyframes naik {
+
+    from {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+    }
+}
+
+
+/* =========================
+   HP
+========================= */
+
+@media (max-width: 600px) {
+
+    .page {
+        align-items: flex-start;
+
+        padding:
+            20px 15px;
+    }
+
+    .card {
+        padding:
+            30px 18px;
+
+        margin-top: 10px;
+    }
+
+    .gift {
+        font-size: 90px;
+    }
+
+    .cake {
+        transform:
+            scale(0.9);
+    }
+
+    .photo {
+        height: 300px;
+    }
+
+    h1 {
+        font-size:
+            clamp(
+                38px,
+                12vw,
+                65px
+            );
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 16px;
+
+        line-height: 1.8;
+
+        max-width: 100%;
+    }
+
+}

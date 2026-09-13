@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Birthday Surprise 💕</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Georgia, serif;
+            background: linear-gradient(135deg, #ffd6e7, #ffb6d5, #ffe4ef);
+            color: #7a3154;
+            text-align: center;
+        }
+
+        .card {
+            width: 90%;
+            max-width: 420px;
+            padding: 40px 25px;
+            border-radius: 30px;
+            background: rgba(255, 245, 249, 0.95);
+            box-shadow: 0 20px 60px rgba(150, 60, 100, 0.25);
+        }
+
+        .heart {
+            font-size: 60px;
+        }
+
+        h1 {
+            color: #d94f8c;
+            margin-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.7;
+        }
+
+        #qrcode {
+            display: flex;
+            justify-content: center;
+            margin: 25px auto;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 13px 25px;
+            border-radius: 30px;
+            background: #e95796;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+    <div class="heart">
+        💕
+    </div>
+
+    <h1>
+        Birthday Surprise
+    </h1>
+
+    <p>
+        Scan QR Code ini untuk membuka kejutan ulang tahun 🎂
+    </p>
+
+    <div id="qrcode"></div>
+
+    <p>
+        Untuk Sayang 💗
+    </p>
+
+    <a href="index.html" class="back">
+        Buka Kejutan 💕
+    </a>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<script>
+    // Link Vercel kamu yang sudah aktif
+    var alamatWebsite = "https://ulangtahuncewekku.vercel.app";
+
+    new QRCode(
+        document.getElementById("qrcode"),
+        {
+            text: alamatWebsite,
+            width: 220,
+            height: 220,
+            colorDark: "#d94f8c",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+        }
+    );
+</script>
+
+</body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Surprise 💕</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+     HALAMAN 1
+===================================================== -->
+<section id="page1" class="page active">
+    <div class="card">
+        <div class="flower">🌸</div>
+        <div class="small-title">
+            A LITTLE SURPRISE FOR
+        </div>
+        <h1>
+            Selamat ulang<br>
+            tahun sayang 💕
+        </h1>
+        <p>
+            Aku punya sesuatu yang spesial buat sayang hari ini...
+        </p>
+        <p>
+            Tekan tombol di bawah untuk mulai ✨
+        </p>
+        <button onclick="halaman2()">
+            Mulai 💗
+        </button>
+    </div>
+</section>
+
+<!-- =====================================================
+     HALAMAN 2
+===================================================== -->
+<section id="page2" class="page">
+    <div class="card">
+        <div class="flower">🔐</div>
+        <h2>Kode Rahasia</h2>
+        <p>
+            Masukkan kode rahasia untuk membuka kejutan 💌
+        </p>
+        <input id="kode" type="password" placeholder="Masukkan kode...">
+        <br>
+        <button onclick="cekKode()">
+            Buka 💌
+        </button>
+        <p id="pesanError"></p>
+    </div>
+</section>
+
+<!-- =====================================================
+     HALAMAN 3
+===================================================== -->
+<section id="page3" class="page">
+    <div class="card">
+        <div id="judulKado" class="small-title">
+            ADA SESUATU UNTUK SAYANG
+        </div>
+        <div id="giftBox" class="gift-box">
+            <div class="gift" onclick="bukaKado()">🎁</div>
+        </div>
+        <p id="teksKado">
+            Tekan hadiahnya 💕
+        </p>
+
+        <!-- KUE -->
+        <div id="cakeArea" class="cake-area">
+            <div class="cake">
+                <div class="candles">
+                    <div class="candle" onclick="matikanApi(this)">
+                        <div class="flame"></div>
+                    </div>
+                    <div class="candle" onclick="matikanApi(this)">
+                        <div class="flame"></div>
+                    </div>
+                    <div class="candle" onclick="matikanApi(this)">
+                        <div class="flame"></div>
+                    </div>
+                </div>
+                <div class="cake-top"></div>
+                <div class="cream"></div>
+                <div class="cake-bottom"></div>
+            </div>
+            <h2 class="pink">Make a Wish! 🎂💕</h2>
+            <p id="instruksiLilin">
+                🔥 Matikan semua apinya dulu ya sayang 💕
+            </p>
+            <button id="tombolLanjutKue" onclick="lanjutDariKue()">
+                Lanjut ✨
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     HALAMAN 4
+===================================================== -->
+<section id="page4" class="page">
+    <div class="card">
+        <div class="flower">🎂</div>
+        <h1>
+            HAPPY<br>
+            BIRTHDAY!
+        </h1>
+        <h2 class="pink">Sayang 💕</h2>
+        <p>
+            Pesan Ulang Tahun untuk Sayang 💕 Selamat ulang tahun, sayang. ❤️ Hari ini adalah hari yang sangat berarti, karena di hari ini seseorang yang begitu berharga dalam hidupku dilahirkan ke dunia. Sayang, mungkin kata-kata yang kutulis di sini tidak akan pernah cukup untuk menggambarkan betapa bersyukurnya aku karena bisa mengenal dan mencintai sayang. Terima kasih karena sudah hadir. Terima kasih karena sudah memberikan begitu banyak warna dalam hidupku. Aku tahu perjalanan kita tidak selalu sempurna. Ada hari ketika kita tertawa sampai lupa waktu, tetapi ada juga hari ketika kita saling diam, salah paham, kecewa, atau bahkan terluka. Namun, dari semua itu aku belajar satu hal: ternyata mencintai bukan hanya tentang menikmati hari-hari yang indah, tetapi juga tentang memilih untuk tetap bertahan ketika keadaan tidak selalu mudah. Dan sampai hari ini, aku masih memilih sayang.
+
+            Bukan karena semuanya selalu sempurna, tetapi karena di balik segala kekurangan dan kesalahan yang kita punya, masih ada seseorang yang ingin terus kujaga, kusayangi, dan kuperjuangkan.
+
+            Sayang, di hari bertambahnya usia ini, aku tidak ingin hanya mengucapkan "selamat ulang tahun". Aku ingin mendoakan lebih banyak hal untuk kehidupan sayang.
+
+            Semoga langkah sayang selalu dipermudah. Semoga setiap lelah yang selama ini disimpan sendiri perlahan digantikan dengan kebahagiaan. Semoga kesehatan selalu menyertai sayang. Semoga hati selalu diberikan ketenangan. Semoga rezeki selalu dilapangkan. Semoga segala impian yang sedang diperjuangkan dapat terwujud satu per satu.
+
+            Dan kalau suatu hari nanti dunia terasa terlalu berat, semoga sayang selalu ingat bahwa ada seseorang yang akan selalu mendoakan dari jauh maupun dekat.
+
+            Aku mungkin tidak selalu tahu bagaimana cara membuat semuanya menjadi lebih mudah. Tetapi satu hal yang ingin selalu kuusahakan adalah menjadi seseorang yang tidak pergi hanya karena keadaan sedang sulit.
+
+            Aku ingin berada di sisi sayang ketika semuanya terasa indah. Dan aku juga ingin tetap berada di sisi sayang ketika semuanya terasa berantakan.
+
+            Aku ingin melihat sayang tersenyum ketika mendapatkan apa yang selama ini diperjuangkan. Aku ingin menjadi orang yang ikut bahagia ketika impian-impian sayang akhirnya tercapai.
+
+            Aku juga ingin menjadi tempat untuk pulang ketika hari terasa melelahkan.
+
+            Sayang, mungkin suatu hari nanti kita akan melihat kembali perjalanan ini dan menyadari betapa banyak hal yang sudah berhasil kita lewati bersama.
+
+            Mungkin kita akan tertawa mengingat pertengkaran-pertengkaran kecil yang dulu terasa begitu besar.
+
+            Dan kalau hari itu benar-benar datang, aku berharap satu hal.
+
+            Semoga kita masih menjadi dua orang yang saling memilih.
+
+            Karena kalau boleh jujur, aku tidak hanya ingin mencintai sayang untuk hari ini.
+
+            Aku ingin menyimpan lebih banyak cerita. Lebih banyak tawa. Lebih banyak perjalanan. Lebih banyak foto. Lebih banyak perayaan ulang tahun. Lebih banyak doa yang kita panjatkan bersama.
+
+            Dan lebih banyak hari di mana kita bisa mengatakan, "ternyata kita berhasil melewati semuanya."
+
+            Sayang, terima kasih sudah menjadi bagian dari hidupku sampai hari ini.
+
+            Terima kasih karena sudah membuat hari-hariku terasa lebih berarti.
+
+            Jika suatu hari nanti sayang merasa tidak cukup baik, tolong ingat bahwa di mata seseorang yang mencintai sayang, sayang selalu memiliki tempat yang begitu istimewa.
+
+            Tidak perlu menjadi sempurna untuk dicintai.
+            Tidak perlu selalu kuat untuk disayangi.
+            Tidak perlu selalu tersenyum untuk tetap berharga.
+
+            Sayang tetap berharga bahkan ketika sedang lelah.
+            Tetap berharga ketika sedang menangis.
+            Tetap berharga ketika sedang merasa gagal.
+            Dan tetap berharga bahkan ketika dunia sedang tidak berpihak.
+
+            Sekali lagi, selamat ulang tahun, sayang. 🎂❤️
+
+            Semoga tahun ini menjadi awal dari banyak sekali kebahagiaan baru.
+            Semoga setiap doa yang diam-diam dipanjatkan akhirnya menemukan jawaban terbaik.
+            Semoga setiap luka menemukan kesembuhan.
+            Semoga setiap kehilangan digantikan dengan sesuatu yang lebih indah.
+
+            Aku bersyukur pernah bertemu dengan sayang.
+            Aku bersyukur bisa mengenal sayang.
+            Aku bersyukur bisa mencintai sayang.
+
+            Selamat bertambah usia, sayang. ❤️
+            Panjang umur. Sehat selalu. Bahagia selalu.
+            Aku sayang sayang.
+
+            Hari ini, besok, dan selama Tuhan masih memberikan kesempatan untuk terus mencintai.
+
+            Selamat ulang tahun, sayangku. 🎂🌷❤️
+        </p>
+        <button onclick="halaman5()">
+            Lanjut ✨
+        </button>
+    </div>
+</section>
+
+<!-- =====================================================
+     HALAMAN 5
+===================================================== -->
+<section id="page5" class="page">
+    <div class="card">
+        <div class="small-title">
+            SPECIAL MOMENT 📸
+        </div>
+        <h2>Untuk Sayang 💕</h2>
+        <div class="photo">
+            <img src="cinta.png" alt="Foto Sayang">
+            <img src="cintabgt.png" alt="Foto Sayang">
+            <img src="cinta2.png" alt="Foto Sayang">
+        </div>
+        <p>
+            Terima kasih sudah hadir dan menjadi bagian dari cerita indah ini. ❤️
+
+            Untuk sayang 💕
+
+            Hari ini bukan cuma tentang bertambahnya satu angka di usia sayang 💕, tapi tentang perjalanan panjang yang sudah sayang lewati sampai bisa menjadi pribadi yang sekarang.
+
+            Lihatlah foto-foto itu… ada seorang anak kecil yang dulu belum tahu akan seperti apa kehidupannya nanti.
+
+            Anak kecil yang mungkin hanya tahu bagaimana caranya tersenyum, bermain, tertawa, dan menikmati hari-harinya.
+
+            Waktu terus berjalan, tanpa terasa anak kecil itu tumbuh… melewati banyak cerita, banyak air mata, banyak tawa, banyak hal yang mungkin tidak semua orang tahu.
+
+            Dan sekarang, anak kecil itu sudah tumbuh menjadi seseorang yang begitu berarti.
+
+            Kalau bisa kembali ke masa lalu, mungkin akuu ingin memeluk versi kecil dari sayang 💕 dan bilang,
+            “Teruslah tumbuh yaa… nanti akan ada banyak hal yang harus dilewati, tapi percayalah, sayang 💕 akan sampai sejauh ini.”
+
+            Mungkin sayang 💕 nggak sadar seberapa jauh perjalanan yang sudah dilewati.
+            Tapi dari foto-foto ini, akuu bisa melihat satu hal: waktu memang berjalan begitu cepat.
+
+            Wajah kecil itu perlahan berubah, hari-hari berganti, dan akhirnya sampailah kita di hari ulang tahun sayang 💕 hari ini.
+
+            Terima kasih sudah bertahan sejauh ini.
+            Terima kasih sudah menjadi diri sayang 💕 yang sekarang.
+
+            Dan terima kasih karena dari sekian banyak perjalanan hidup yang sudah dilewati, akhirnya akuu bisa menjadi salah satu bagian kecil dari cerita sayang 💕.
+
+            Selamat ulang tahun, sayang 💕🎂
+
+            Semoga setiap luka yang pernah datang diganti dengan kebahagiaan, setiap air mata diganti dengan senyuman, dan setiap doa yang pernah dipanjatkan perlahan menemukan jalannya untuk menjadi nyata.
+
+            Kalau suatu hari nanti sayang 💕 melihat foto-foto ini lagi, semoga sayang 💕 bisa tersenyum dan berkata,
+            “Ternyata aku sudah sejauh ini…”
+
+            Dan akuu cuma ingin bilang satu hal…
+            Akuu bangga sama sayang 💕.
+
+            Bukan hanya karena siapa sayang 💕 sekarang, tapi karena semua versi diri sayang 💕 yang sudah berjuang sampai hari ini.
+
+            Selamat bertambah usia, sayang 💕.
+            Semoga perjalanan setelah ini jauh lebih indah.
+
+            Dan semoga, kalau Tuhan mengizinkan, akuu masih bisa melihat foto-foto baru sayang 💕 di tahun-tahun berikutnya.
+
+            “Ternyata anak kecil yang dulu itu sekarang sudah tumbuh sejauh ini.” 🤍✨
+        </p>
+        <button onclick="halaman6()">
+            Next 💗
+        </button>
+    </div>
+</section>
+
+<!-- =====================================================
+     HALAMAN 6
+===================================================== -->
+<section id="page6" class="page">
+    <div class="card">
+        <div class="photo">
+            <img src="meandpricnes1.png" alt="Foto Kita">
+            <img src="meandprinces2.png" alt="Foto Kita">
+            <img src="meandprinces3.png" alt="Foto Kita">
+        </div>
+        <h2>Kenangan Kita</h2>
+        <p>
+            Semoga semua kenangan indah ini selalu tersimpan.
+
+            Kalau suatu hari nanti kita melihat foto-foto ini lagi, mungkin kita akan tersenum mengingat betapa banyak hal yang sudah kita lewati bersama.
+
+            Dari hal-hal sederhana yang mungkin dulu terasa biasa saja, sampai momen-momen yang sekarang justru menjadi kenangan paling berharga.
+
+            Ada tawa di dalam foto-foto ini, ada kebahagiaan, ada cerita yang cuma kita yang tahu.
+            Tapi dari semuanya, ada satu hal yang membuat akuu bersyukur…
+            Kita pernah ada di setiap momen itu bersama.
+
+            Waktu mungkin akan terus berjalan.
+            Foto-foto akan semakin bertambah, wajah kita mungkin akan berubah, kehidupan kita juga pasti akan membawa kita ke banyak tempat dan cerita baru.
+
+            Tapi akuu berharap, kenangan yang ada di sini nggak pernah benar-benar hilang.
+            Karena setiap foto bukan cuma sekadar gambar.
+            Di dalamnya ada cerita tentang kita.
+            Tentang dua orang yang pernah tertawa bersama.
+            Tentang dua orang yang pernah saling menguatkan.
+            Tentang dua orang yang mungkin tidak selalu sempurna, tapi tetap memilih untuk belajar memahami satu sama lain.
+
+            Dan kalau nanti kita sudah semakin dewasa, mungkin kita akan melihat kembali foto-foto ini dan berkata,
+            “Ternyata dulu kita pernah sebahagia itu ya…”
+
+            Semoga saat hari itu tiba, kita masih bisa tersenyum ketika mengingat semuanya.
+            Terima kasih sudah menjadi bagian dari begitu banyak kenangan indah dalam hidup akuu.
+
+            Terima kasih untuk setiap tawa, setiap cerita, setiap perhatian kecil, dan setiap waktu yang pernah kita habiskan bersama.
+
+            Mungkin kenangan ini akan menjadi bagian dari masa lalu suatu hari nanti…
+            Tapi bagi akuu, beberapa kenangan memang tidak pernah benar-benar menjadi masa lalu.
+            Karena sebagian dari mereka akan selalu tinggal di hati.
+
+            Semoga semua kenangan kita selalu tersimpan, bukan hanya di foto, tapi juga di hati kita masing-masing. 🤍✨
+        </p>
+        <button onclick="halaman7()">
+            Lanjut 💕
+        </button>
+    </div>
+</section>
+
+<!-- =====================================================
+     HALAMAN 7
+===================================================== -->
+<section id="page7" class="page">
+    <div class="card">
+        <div class="flower">🌷</div>
+        <h2>Pesan Kecil 💌</h2>
+        <p>
+            Selamat bertambah usia sayang 💕.
+        </p>
+        <p>
+            Semoga selalu diberikan kesehatan, kebahagiaan, dan kemudahan dalam setiap langkah.
+        </p>
+        <p>
+            Semoga semua impian yang sedang diperjuangkan dapat terwujud satu per satu.
+        </p>
+        <button onclick="halaman8()">
+            Terakhir ✨
+        </button>
+    </div>
+</section>
+
+<!-- =====================================================
+     HALAMAN 8
+===================================================== -->
+<section id="page8" class="page">
+    <div class="card">
+        <div class="flower">❤️</div>
+        <div class="small-title">ONCE AGAIN</div>
+        <h1>
+            HAPPY<br>
+            BIRTHDAY 🎂
+        </h1>
+        <h2 class="pink">Sayang 💕</h2>
+        <p>
+            Semoga hari ini menjadi salah satu hari yang paling indah.
+        </p>
+        <p>
+            Terima kasih sudah membuka sampai akhir ❤️
+        </p>
+        <a href="qr.html" class="qr-button">
+            📱 Buka QR Code 💕
+        </a>
+        <br>
+        <button onclick="awal()">
+            Ulangi 🔄
+        </button>
+    </div>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
